@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+header {
+  display: inline;
+}
+.jumbotron {
+  background-color: #141414;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(250deg, rgba(4, 4, 4, 0) 0%, #040404 80%),
+    url(/assets/images/hero-pizza.png);
+  color: #fff;
+  padding: 60px;
+  font-size: 20px;
+  text-align: center;
+}
+.header-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  height: 114px;
+}
+nav {
+  background-color: #040404;
+  box-shadow: 18px 18px 44px 0px rgba(0, 0, 0, 0.75);
+  padding: 5px;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  text-transform: uppercase;
+  font-family: PizzaHutFont;
+  overflow: hidden;
+}
+nav li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 20px;
+}
+nav a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  background-color: #141414;
+  color: #fff;
+}
+.card-container {
+  flex-wrap: wrap;
+  display: flex;
+  padding: 20px;
+}
+.card {
+  width: 24rem;
+  height: 36rem;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background-color: #040404;
+  flex-basis: calc(25% - 10px);
+  margin: 10px 5px;
+  box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+.card img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-out;
+}
+.card-content h2 {
+  position: absolute;
+  inset: auto auto 30px 30px;
+  margin: 0;
+  transition: inset 0.3s 0.3s ease-out;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.card-content p {
+  position: absolute;
+  opacity: 0;
+  max-width: 80%;
+  transition: opacity 0.3s ease-out;
+  inset: auto auto 60px 30px;
+}
+#pepperoni:hover img,
+#cheese:hover img,
+#chicken:hover img,
+#vegan:hover img {
+  transition: opacity 0.3s ease-in;
+  opacity: 1;
+}
+#pepperoni:hover .card-content h2,
+#cheese:hover .card-content h2,
+#chicken:hover .card-content h2,
+#vegan:hover .card-content h2 {
+  inset: auto auto 180px 30px;
+  transition: inset 0.3s ease-out;
+}
+#pepperoni:hover .card-content p,
+#cheese:hover .card-content p,
+#chicken:hover .card-content p,
+#vegan:hover .card-content p {
+  opacity: 1;
+  transition: opacity 0.5s 0.1s ease-in;
+}
+.container {
+  background-color: #040404;
+  width: 100%;
+  padding: 20px;
+}
+.content {
+  float: left;
+  width: 75%;
+}
+aside {
+  float: left;
+  padding-left: 20px;
+  width: 25%;
+}
+.featured-image {
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+.outlet {
+  flex-wrap: wrap;
+  display: flex;
+}
+.outlet-item {
+  margin: 10px;
+  width: 30%;
+}
+.outlet-item a {
+  color: #fff;
+  text-decoration: none;
+}
+.profile p {
+  text-align: justify;
+}
+figure figcaption {
+  margin-bottom: 10px;
+}
+th,
+td {
+  padding: 5px;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: PizzaHutFont;
+}
+.quote-container {
+  width: 100%;
+  height: 500px;
+  background-color: #141414;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(180deg, rgba(4, 4, 4, 0) 0%, #040404 100%),
+    url(/assets/images/image-overlay.jpg);
+  opacity: 1;
+  padding: 60px;
+  text-align: center;
+}
+.quote img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  height: 184px;
+  margin-bottom: 20px;
+}
+footer {
+  background: #c90014;
+  color: #fff;
+  font-weight: 700;
+  padding: 20px;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .content,
+  aside {
+    padding: 0;
+    width: 100%;
+  }
+  figure {
+    text-align: center;
+  }
+  #pepperoni:hover .card-content h2,
+  #cheese:hover .card-content h2,
+  #chicken:hover .card-content h2,
+  #vegan:hover .card-content h2 {
+    inset: auto auto 210px 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    flex-basis: calc(50% - 10px);
+  }
+  #pepperoni:hover .card-content h2,
+  #cheese:hover .card-content h2,
+  #chicken:hover .card-content h2,
+  #vegan:hover .card-content h2 {
+    inset: auto auto 180px 30px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .card {
+    height: 16rem;
+  }
+  #pepperoni:hover .card-content h2,
+  #cheese:hover .card-content h2,
+  #chicken:hover .card-content h2,
+  #vegan:hover .card-content h2 {
+    inset: auto auto 150px 20px;
+  }
+  .card-container h2 {
+    inset: auto auto 30px 20px;
+  }
+  .card-content p {
+    inset: auto auto 30px 20px;
+    font-size: small;
+  }
+  .outlet-item {
+    width: 45%;
+    margin: 5px;
+  }
+  .quote-container {
+    max-width: 100%;
+    width: auto;
+    height: 500px;
+    overflow: hidden;
+  }
+  .quote img {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .card {
+    flex-basis: calc(50% - 10px);
+    width: 6rem;
+    height: 14rem;
+  }
+  .card-content h2 {
+    inset: auto auto 30px 20px;
+    font-size: large;
+  }
+  .card-content p {
+    inset: auto auto 20px 20px;
+    font-size: smaller;
+  }
+  #pepperoni:hover .card-content h2,
+  #cheese:hover .card-content h2,
+  #chicken:hover .card-content h2,
+  #vegan:hover .card-content h2 {
+    inset: auto auto 172px 20px;
+  }
+  .outlet-item {
+    width: 45%;
+  }
+}

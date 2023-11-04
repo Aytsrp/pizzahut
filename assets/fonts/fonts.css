@@ -1,0 +1,7 @@
+@font-face {
+  font-family: PizzaHutFont;
+  src: url("PizzaHutFont.woff") format("woff"),
+    url("PizzaHutFont.woff2") format("woff2");
+  font-weight: "normal";
+  font-display: swap;
+}
