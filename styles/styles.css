@@ -19,7 +19,7 @@ header {
   background-size: cover;
   background-position: center;
   background-image: linear-gradient(250deg, rgba(4, 4, 4, 0) 0%, #040404 80%),
-    url('../images/hero-pizza.png');
+    url(../images/hero-pizza.png);
   color: #fff;
   padding: 60px;
   font-size: 20px;
@@ -183,7 +183,7 @@ h4 {
   background-size: cover;
   background-position: center;
   background-image: linear-gradient(180deg, rgba(4, 4, 4, 0) 0%, #040404 100%),
-    url('../images/image-overlay.jpg');
+    url(../images/image-overlay.jpg);
   opacity: 1;
   padding: 60px;
   text-align: center;
